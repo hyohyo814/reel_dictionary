@@ -1,0 +1,14 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-o",
+      "main.exe",
+      "main.c"
+    ],
+    "directory": "/home/hyohyo814/cstuff/dsa/table",
+    "file": "/home/hyohyo814/cstuff/dsa/table/main.c",
+    "output": "/home/hyohyo814/cstuff/dsa/table/main.exe"
+  }
+]
