@@ -6,6 +6,8 @@
 #define UPPER 99
 #define RANDSEL rand() % (UPPER + 1 - LOWER) + LOWER
 
+#define STOPS 22
+
 unsigned int Table[100] = {
 	0, 0, 0, 0, 0, 0,	// --
 	1, 1, 1, 1, 1,		// B3
@@ -31,7 +33,7 @@ unsigned int Table[100] = {
 	21, 21, 21, 21,		// W7
 };
 
-const char *Reel[22] = {
+const char *Reel[STOPS] = {
 	"--",
 	"B3",
 	"--",
@@ -60,10 +62,12 @@ int main() {
 	srand(time(NULL));
 	int select = RANDSEL;
 	int value = Table[select];
+	int remaining = STOPS - value;
 
 	printf("Select key: %u\n", select);
 	printf("Select value: %u\n", value);
 	printf("Select stop: %s\n", Reel[value]);
+	printf("Stops to home: %u\n", remaining);
 
 	return 0;
 }
